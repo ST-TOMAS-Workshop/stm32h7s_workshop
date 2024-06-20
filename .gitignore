@@ -1,0 +1,13 @@
+*.o
+*.d
+*.su
+*.mk
+*.elf
+*.hex
+*.bin
+*.list
+*.pbi
+*.xcl
+*.dep
+**/Debug
+**/.settings
