@@ -17,7 +17,8 @@ Presentation
 ```
 
 into infinite loop:
-```c
+
+```c-nc
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -37,12 +38,17 @@ into infinite loop:
 8. Go to main function 
 9. Add Cache invalidation functions
 
-```c
+```c-nc
   /* USER CODE BEGIN 1 */
 
   SCB_InvalidateDCache();
   SCB_InvalidateICache();
   /* USER CODE END 1 */
+```
+
+```c
+  SCB_InvalidateDCache();
+  SCB_InvalidateICache();
 ```
 
 # Compile
