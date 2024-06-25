@@ -1,0 +1,15 @@
+3.0.1
+- Update to TouchGFX 4.24
+- Update MPU settings, allowing instruction from fewer regions to reduce speculative execution misses
+- Reduce region of uncached SRAM for GPU2D commandlist, to make more available for general purpose SRAM
+- Moved FreeRTOS heap to DTCM memory to improve performance
+
+3.0.0
+First released version
+- TouchGFX 4.23.2
+- STM32CubeMX 6.11.0
+- Firmware FW_H7RS V1.0.0
+- X-CUBE-FREERTOS 1.1.0
+- Support for STM32CubeIDE
+- Support for EWARM
+- Support for "Run target" in TouchGFX Designer

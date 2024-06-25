@@ -1,0 +1,34 @@
+
+{
+  "Application": {
+    "Name": "STM32H7S78-DK",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "AvailableColorDepths": [ 16 ],
+    "AvailableLCDs":
+    {
+      "16": "LCDGPU2D"
+    },
+    "AvailableResolutions": [
+      {
+        "Width": 800,
+        "Height": 480
+      }
+    ],
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H7R7/7S7",
+    "Platform": "m7",
+    "Toolchain": "STM32CubeIDE",
+    "ProjectFile": "../../STM32H7S78-DK.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [
+      "GPU2D"
+    ],
+    "AdditionalFeatures": [
+      "GPU2DVector",
+      "VectorFonts",
+      "Video"
+    ]
+  },
+  "Version": "4.24.0"
+}

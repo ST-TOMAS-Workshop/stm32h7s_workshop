@@ -1,0 +1,177 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 80,
+            "Height": 80
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_800x480_puzzle.png"
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "textureMapper1",
+            "X": 345,
+            "Width": 455,
+            "Height": 480,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "__generated\\alternate_theme_images_logos_touchgfx_gradient_smooth.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 151.5,
+            "YBitmapPosition": 164.0,
+            "Scale": 2.7,
+            "LockOrigoToCenter": true,
+            "XOrigo": 227.5,
+            "YOrigo": 240.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "textureMapper2",
+            "Width": 345,
+            "Height": 355,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "__generated\\alternate_theme_images_logos_touchgfx_gradient_smooth.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 96.5,
+            "YBitmapPosition": 101.5,
+            "Scale": 2.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 172.5,
+            "YOrigo": 177.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 111,
+            "Y": 386,
+            "Width": 138,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_medium_round_text_off_normal.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_medium_round_text_on_dark.png",
+            "Preset": "alternate_theme\\presets\\togglebutton\\medium\\round_text.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 1
+            },
+            "Action": {
+              "Type": "ActionRotateTextureMapper",
+              "IsRelative": true,
+              "ZAngle": 0.1,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "ActionComponent": "textureMapper1"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 1
+            },
+            "Action": {
+              "Type": "ActionRotateTextureMapper",
+              "IsRelative": true,
+              "ZAngle": -0.1,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "ActionComponent": "textureMapper2"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Includes": "  #ifndef SIMULATOR\r\n  #include <TouchGFXHAL.hpp>\r\n  #endif/*SIMULATOR*/",
+              "Code": "#ifndef SIMULATOR\r\nstatic uint8_t b_NeoChromEnabled = 1;\r\n  if (b_NeoChromEnabled)\r\n  {\r\n    b_NeoChromEnabled = 0;\r\n     // function natively in TouchGFX for STM32H7RS\r\n    ((TouchGFXHAL*)touchgfx::HAL::getInstance())->activateNeoChrom(false); \r\n  }\r\n  else\r\n  {\r\n    b_NeoChromEnabled = 1;\r\n    // function natively in TouchGFX for STM32H7RS\r\n    ((TouchGFXHAL*)touchgfx::HAL::getInstance())->activateNeoChrom(true); \r\n  }\r\n#endif /*SIMULATOR*/"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "action1"
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication_11",
+    "Resolution": {
+      "Width": 800,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp",
+      "16": "LCDGPU2D"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 800,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../../gcc/Makefile flash",
+    "FlashTargetIntCommandOverride": "make -f ../../gcc/Makefile intflash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H7R7/7S7",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../../STM32H7S78-DK.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [
+      "GPU2D"
+    ],
+    "AdditionalFeatures": [
+      "GPU2DVector",
+      "VectorFonts",
+      "Video"
+    ]
+  },
+  "Version": "4.24.0",
+  "CreatedBy": "4.24.0"
+}
