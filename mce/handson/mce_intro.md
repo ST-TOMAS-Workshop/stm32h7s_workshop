@@ -2,6 +2,18 @@
 Presentation
 ----!
 
+# Can we read out the content of external memory?
+
+The extenral memory content if fully visible to anyone who will connect on the bust or read the external memory. 
+
+![](./img/Slide49.SVG)
+
+# How to prevent it?
+
+We can use MCE unit which can encrypt and decrypt data from xSPI/FM if they are memory mapped. 
+
+![](./img/mce.json)
+
 # STM32H7R/S bootflash MCU + OSPI + MCE example
 
 We will utilize an existing OSPI example for the STM32H7R/S series, which can be found under

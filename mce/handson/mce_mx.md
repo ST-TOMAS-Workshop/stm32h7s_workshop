@@ -18,19 +18,4 @@ To ensure successful encryption, the memory must be operated in memory-mapped mo
 1. Select **HPDMA1**.
 2. Set `Channel15`  to **Standard request mode**.
 
-![hdma](img/24_06_06_482.png)
-
-3. Go to the `SECURITY` tab.
-4. Set `Enable Channel as Priviledged` to **PRIVILEDGED**.
-
-![security](img/24_06_06_484.png)
-
-5. Navigate to the `CH15` tab.
-6. Set `Source Address Increment After Transfer` to **ENABLE**.
-7. Set `Source Burst Length` to **16** (needed by MCE!).
-8. Set `Destination Address Increment After Transfer` to **ENABLE**.
-9. Set `Destination Burst Length` to **16** (needed by MCE!).
-
-![hdma config](img/24_06_06_486.png)
-
 Now we can **generate code**.

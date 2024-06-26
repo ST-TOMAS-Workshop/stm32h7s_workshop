@@ -65,6 +65,21 @@
       "name": "MCE CubeIDE",
       "path": "/mce/handson",
       "file": "mce_ide.md"
+    },
+    {
+      "name": "MCE CubeIDE uncomment",
+      "path": "/mce/handson",
+      "file": "mce_ide_uncomment.md"
+    },
+    {
+      "name": "mce",
+      "path": "/mce/theory",
+      "file": "mce.md"
+    },
+    {
+      "name": "MCE loader",
+      "path": "/mce/theory",
+      "file": "mce_loader.md"
     }
   ],
   "menuStructure": [
@@ -138,7 +153,15 @@
         {
           "type": "Folder",
           "name": "Theory",
-          "children": []
+          "children": [   {
+            "type": "File",
+            "name": "1. MCE",
+            "file": "mce.md"
+          },   {
+            "type": "File",
+            "name": "2. MCe & Loader",
+            "file": "mce_loader.md"
+          }]
         },
         {
           "type": "Folder",
@@ -158,6 +181,11 @@
               "type": "File",
               "name": "3. CubeIDE",
               "file": "mce_ide.md"
+            },
+            {
+              "type": "File",
+              "name": "4. CubeIDE uncomment",
+              "file": "mce_ide_uncomment.md"
             }
           ]
         }

@@ -22,3 +22,22 @@ It can be used in bootloader and in external loader.
 
 
 ![](./img/extmem_manager.json)
+
+
+## Memory modes
+
+
+### Execute in place
+
+The code is directly executed from memory
+
+![](./img/Slide77.SVG)
+
+### Load and Run
+
+Core is first loaded to RAM and then excuted there.
+
+Mainly fro not mapped memories like SDCard
+Or for slow external memories
+
+![](./img/Slide78.SVG)
