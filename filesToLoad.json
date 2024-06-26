@@ -22,6 +22,36 @@
       "file": "extmem_ide.md"
     },
     {
+      "name": "ExtMem Loader",
+      "path": "/extmem/theory",
+      "file": "extmem_loader.md"
+    },
+    {
+      "name": "ExtMem Manager",
+      "path": "/extmem/theory",
+      "file": "extmem_manager.md"
+    },
+    {
+      "name": "MPU",
+      "path": "/extmem/theory",
+      "file": "mpu.md"
+    },
+    {
+      "name": "MX Structure",
+      "path": "/extmem/theory",
+      "file": "mxdivision.md"
+    },
+    {
+      "name": "High Speed Low Voltage",
+      "path": "/extmem/theory",
+      "file": "sbs_hslv.md"
+    },
+    {
+      "name": "xSPI ports",
+      "path": "/extmem/theory",
+      "file": "xspi.md"
+    },
+    {
       "name": "MCE intro",
       "path": "/mce/handson",
       "file": "mce_intro.md"
@@ -45,7 +75,38 @@
         {
           "type": "Folder",
           "name": "Theory",
-          "children": []
+          "children": [
+            {
+              "type": "File",
+              "name": "1. MX Structure",
+              "file": "mxdivision.md"
+            },
+            {
+              "type": "File",
+              "name": "2. MPU",
+              "file": "mpu.md"
+            },
+            {
+              "type": "File",
+              "name": "3. xSPIro",
+              "file": "xspi.md"
+            },
+            {
+              "type": "File",
+              "name": "4. HSLV",
+              "file": "sbs_hslv.md"
+            },
+            {
+              "type": "File",
+              "name": "5. ExtMem Manager",
+              "file": "extmem_manager.md"
+            },
+            {
+              "type": "File",
+              "name": "6. ExtMem Loader",
+              "file": "extmem_loader.md"
+            }
+          ]
         },
         {
           "type": "Folder",

@@ -9,7 +9,7 @@ Presentation
 ### 1. Run STM32CubeMX
 ### 2. Menu>File>New Project...
 
-   ![Start new project](./img/24_03_11_387.gif)
+![Start new project](./img/24_03_11_387.gif)
 
 ### 3. Search for STM32H7S3L8H6 (same as on NUCLEO-H7S3L8)
 
