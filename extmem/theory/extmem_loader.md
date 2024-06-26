@@ -10,4 +10,4 @@ We can create loader for:
 - IAR
 - Keil
 
-![](./img/extmem_loader.md)
+![](./img/extmem_loader.json)

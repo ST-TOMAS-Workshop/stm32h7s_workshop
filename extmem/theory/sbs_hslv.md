@@ -15,3 +15,5 @@ Both must be applied to have HSLV functional.
 If HSLV is used and power of xSPI is >2.6V it will damage the device
 </Warning>
 
+
+![](./img/hslv.json)
