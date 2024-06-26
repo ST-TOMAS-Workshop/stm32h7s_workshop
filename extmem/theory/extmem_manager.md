@@ -31,7 +31,7 @@ It can be used in bootloader and in external loader.
 
 The code is directly executed from memory
 
-![](./img/Slide77.SVG)
+![](./img/Slide77.svg)
 
 ### Load and Run
 
@@ -40,4 +40,4 @@ Core is first loaded to RAM and then excuted there.
 Mainly fro not mapped memories like SDCard
 Or for slow external memories
 
-![](./img/Slide78.SVG)
+![](./img/Slide78.svg)

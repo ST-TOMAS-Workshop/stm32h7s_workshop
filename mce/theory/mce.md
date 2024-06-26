@@ -13,7 +13,7 @@ We have three MCE units
 - for XSPI2
 - for FMC
 
-![](./img/Slide71.SVG)
+![](./img/Slide71.svg)
 
 
 ### MCE1
@@ -47,4 +47,4 @@ MCE can have 4 regions with different configuration.
 Each region can cover different address range. 
 Can define if the encryption will be used for read/write or not. 
 
-![](./img/Slide56.SVG)
+![](./img/Slide56.svg)
