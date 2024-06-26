@@ -6,26 +6,26 @@ Presentation
 
 There is only one project stored in internal FLASH.
 
-![extloader](./img/Slide4.SVG)
+![extloader](./img/Slide4.svg)
 
 # Device with external memory boot code
 
 On device with external memory we need one projectfor internal boot memory
 
-![extloader](./img/Slide5.SVG)
+![extloader](./img/Slide5.svg)
 
 # Device with external memory application code
 
 We need one project for application code which will be in external memory
 
-![extloader](./img/Slide6.SVG)
+![extloader](./img/Slide6.svg)
 
 # Device with external memory, put code on external memory
 
 And we need create external loader to put code into external memory
 
 
-![extloader](./img/Slide20.SVG)
+![extloader](./img/Slide20.svg)
 
 # What we need then?
 
@@ -39,7 +39,7 @@ The bootflash MCU comes with a small embedded Flash (64KB) used primarily for th
 OSPI (Octal Serial Peripheral Interface) utilizes eight data lines to connect an external NOR flash memory to the MCU.
 We'll be utilizing the NUCLEO-H7S3L8 board as our hardware platform.
 
-![extloader](./img/Slide2.SVG)
+![extloader](./img/Slide2.svg)
 
 
 # What we will create

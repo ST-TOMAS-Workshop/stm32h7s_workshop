@@ -6,7 +6,7 @@ Presentation
 
 The extenral memory content if fully visible to anyone who will connect on the bust or read the external memory. 
 
-![](./img/Slide49.SVG)
+![](./img/Slide49.svg)
 
 # How to prevent it?
 
