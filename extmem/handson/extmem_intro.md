@@ -55,3 +55,7 @@ We'll be utilizing the NUCLEO-H7S3L8 board as our hardware platform.
 - STM32CubeMX
 - STM32CubeIDE (or a different IDE)
 - NUCLEO-H7S3L8 board
+
+Complete handson:
+
+[Link](https://github.com/ST-TOMAS-Examples-ExtMem/stm32h7rs_ospi)
