@@ -41,3 +41,8 @@ Mainly fro not mapped memories like SDCard
 Or for slow external memories
 
 ![](./img/Slide78.svg)
+
+
+## Memory configuration
+
+The ExtMem Manager will try to set maximum speed on xSPI related to info provided by memory. Here you need to pay attention if the memory is running at <2.6V the user must enable HSLV feature

@@ -29,7 +29,21 @@ And we need create external loader to put code into external memory
 
 # What we need then?
 
+## Use old approach
+
+We need to create threee projects
+- Bootloader
+- Application
+- External loader
+
+We need to read all external memory menual to lear how to work with it. And impleent all this functions into Bootloader and External loader
+
+## With CubeMX for H7RS
+
 All this can be done with STM32CubeMX
+Bube MX now create all three projects
+
+With SFDP and ExtMem Manager we can automatically configure the memory. Without deep knowledge how memory works. 
 
 
 # STM32H7R/S bootflash MCU + OSPI example
