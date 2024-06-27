@@ -7,7 +7,7 @@ Presentation
 1. Select `MCE1` for **Bootloader** and **ExtMem Loader**.
 2. In `Mode` ensure the **Activated** checkbox is checked.
 
-![alt text](img/24_06_06_481.png)
+![alt text](./img/24_06_06_481.png)
 
 
 # HPDMA (High-Performance Direct Memory Access)
