@@ -9,7 +9,7 @@ Presentation
 1. Navigate to the Bootloader **main.c** file.
 2. Include the encryption/decryption key.
    
-Uncomment:
+**Uncomment:**
 
 ```c-nc
 /* USER CODE BEGIN PV */
@@ -21,7 +21,7 @@ const uint32_t key[4] =     { 0x12345678, 0x0, 0x0, 0x0 };
 
 3. Configure MCE and enable it.
    
-Uncomment:
+**Uncomment:**
 
 ```c-nc
 /* USER CODE BEGIN 2 */
@@ -53,7 +53,7 @@ Uncomment:
 
 4. Add cache invalidation to ensure their contents are valid.
 
-Uncomment:
+**Uncomment:**
 
 ```c-nc
   /* USER CODE BEGIN 1 */
@@ -69,16 +69,12 @@ Uncomment:
 1. Go to ExtMemLoader to file **extmemloader_init.c** in **Core/Src** folder.
 2. Include the encryption/decryption key.
    
+Already present
+
 ```c-nc
 /* USER CODE BEGIN PV */
 const uint32_t key[4] =     { 0x12345678, 0x0, 0x0, 0x0 };
 /* USER CODE END PV */
-```
-
-For copy:
-
-```c
-const uint32_t key[4] =     { 0x12345678, 0x0, 0x0, 0x0 };
 ```
 
 # Configure MCE
@@ -92,14 +88,43 @@ Already uncommented
 
 
 
-We now need to update the memory write process to utilize High-Performance Direct Memory Access controller (HPDMA) rather than the standard byte write method. 
-This can be achieved by overriding the weak `EXTMEM_MemCopy` function with our own implementation that incorporates HPDMA.
+# redefine memory_write
+
+4. We will redefine `memory_write` in our **extmemloader_init.c**.
+
+**Uncomment:**
+
+```c-nc
+MEM_STATUS memory_write(uint32_t Address, uint32_t Size, uint8_t* buffer){
+  MEM_STATUS retr = MEM_OK; /* No error returned */
+
+  if(Size>=MAX_PAGE_WRITE){
+    /* memory mapped write for 256B*/
+    if (EXTMEM_WriteInMappedMode(STM32EXTLOADER_DEVICE_MEMORY_ID, Address, buffer, Size) != EXTMEM_OK)
+    {
+      retr = MEM_FAIL;
+    }
+  }else{
+    /* normal byte write*/
+    if (EXTMEM_Write(STM32EXTLOADER_DEVICE_MEMORY_ID, Address & 0x0FFFFFFFUL, buffer, Size) != EXTMEM_OK)
+    {
+      retr = MEM_FAIL;
+    }
+  }
+
+  return retr;
+}
+/* USER CODE END 0 */
+```
 
 # HPDMA configuration
 
-4. Add HPDMA configuration to **extmemloader_init.c** file.
+We now need to update the memory write process to utilize High-Performance Direct Memory Access controller (HPDMA) rather than the standard byte write method. 
+This can be achieved by overriding the weak `EXTMEM_MemCopy` function with our own implementation that incorporates HPDMA.
 
-Uncomment:
+5. Add HPDMA configuration to **extmemloader_init.c** file.
+
+**Uncomment:**
 
 ```c-nc
 /* USER CODE BEGIN 0 */
@@ -146,9 +171,9 @@ void EXTMEM_MemCopy(uint32_t* destination_Address, const uint8_t* ptrData, uint3
 
 # Add buffer
 
-5. Add a temporary buffer to ensure that all DMA reads are properly aligned.
+6. Add a temporary buffer to ensure that all DMA reads are properly aligned.
 
-Uncomment: 
+**Uncomment: **
 
 ```c-nc
 /* USER CODE BEGIN PV */
@@ -161,34 +186,7 @@ uint32_t buffer[MAX_PAGE_WRITE]  __attribute__ ((aligned (1024))) ;
 To utilize EXTMEM_MemCopy, we also need to modify an additional function that determines the method of writing. This function is `memory_write` in `memory_wrapper.c` in **Middleware/ST/STM32ExtMem_Loader/core**.
 
 
-# redefine memory_write
 
-6. We will redefine `memory_write` in our **extmemloader_init.c**.
-
-Uncomment: 
-
-```c-nc
-MEM_STATUS memory_write(uint32_t Address, uint32_t Size, uint8_t* buffer){
-  MEM_STATUS retr = MEM_OK; /* No error returned */
-
-  if(Size>=MAX_PAGE_WRITE){
-    /* memory mapped write for 256B*/
-    if (EXTMEM_WriteInMappedMode(STM32EXTLOADER_DEVICE_MEMORY_ID, Address, buffer, Size) != EXTMEM_OK)
-    {
-      retr = MEM_FAIL;
-    }
-  }else{
-    /* normal byte write*/
-    if (EXTMEM_Write(STM32EXTLOADER_DEVICE_MEMORY_ID, Address & 0x0FFFFFFFUL, buffer, Size) != EXTMEM_OK)
-    {
-      retr = MEM_FAIL;
-    }
-  }
-
-  return retr;
-}
-/* USER CODE END 0 */
-```
 
 # disable write access
 
@@ -221,32 +219,6 @@ Already done:
   /* Enables the MPU */
   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
   /* USER CODE END 1 */
-```
-
-for copy
-
-```c
-  MPU_Region_InitTypeDef MPU_InitStruct = {0};
-  /* Disables the MPU */
-  HAL_MPU_Disable();
-
-  /** Initializes and configures the Region and the memory to be protected
-  */
-  MPU_InitStruct.Enable = MPU_REGION_ENABLE;
-  MPU_InitStruct.Number = MPU_REGION_NUMBER1;
-  MPU_InitStruct.BaseAddress = 0x90000000;
-  MPU_InitStruct.Size = MPU_REGION_SIZE_256MB;
-  MPU_InitStruct.SubRegionDisable = 0x00;
-  MPU_InitStruct.TypeExtField = MPU_TEX_LEVEL0;
-  MPU_InitStruct.AccessPermission = MPU_REGION_PRIV_RO;
-  MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
-  MPU_InitStruct.IsShareable = MPU_ACCESS_NOT_SHAREABLE;
-  MPU_InitStruct.IsCacheable = MPU_ACCESS_NOT_CACHEABLE;
-  MPU_InitStruct.IsBufferable = MPU_ACCESS_NOT_BUFFERABLE;
-
-  HAL_MPU_ConfigRegion(&MPU_InitStruct);
-  /* Enables the MPU */
-  HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
 ```
 
 # disable caches
