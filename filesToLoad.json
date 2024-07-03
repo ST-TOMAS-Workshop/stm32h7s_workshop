@@ -158,8 +158,8 @@
     },
     {
       "type": "File",
-      "name": "STM32S Graphic",
-      "file": "stm32h7r_graphic.md"
+      "name": "STM32RS Graphic",
+      "file": "stm32h7rs_graphic.md"
     },
     {
       "type": "Folder",
