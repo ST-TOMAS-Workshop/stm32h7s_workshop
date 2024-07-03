@@ -80,6 +80,16 @@
       "name": "MCE loader",
       "path": "/mce/theory",
       "file": "mce_loader.md"
+    },
+    {
+      "name": "STM32H7RS Graphic",
+      "path": "/graphical_UI/handson/STM32H7RSWorkShop-Benefit_of_NeoChrom_Demo",
+      "file": "stm32h7rs_graphic.md"
+    },
+    {
+      "name": "STM32RS Security",
+      "path": "/debug_authentication/handson/STM32H7RSWorkShop-Debug_authentication",
+      "file": "stm32h7rs_security.md"
     }
   ],
   "menuStructure": [
@@ -147,6 +157,11 @@
       ]
     },
     {
+      "type": "File",
+      "name": "STM32S Graphic",
+      "file": "stm32h7r_graphic.md"
+    },
+    {
       "type": "Folder",
       "name": "STM32H7S use MCE",
       "children": [
@@ -190,6 +205,11 @@
           ]
         }
       ]
+    },
+    {
+      "type": "File",
+      "name": "STM32RS Security",
+      "file": "stm32h7rs_security.md"
     }
   ]
 }
