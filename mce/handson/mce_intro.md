@@ -27,6 +27,10 @@ The Memory Cipher Engine (MCE) will encrypt the data within the external memory 
 
 [Link](https://github.com/ST-TOMAS-Examples-ExtMem/stm32h7rs_ospi_mce)
 
-# Uncomment version
+# Version to be uncomented based on 
+
+[Uncoment guide] (https://rristm.github.io/tomas_materials_v2/ST-TOMAS-Workshop/stm32h7s_workshop/master/mce_ide_uncomment.md/0)
+
+# Uncomment project: 
 
 [Link](https://github.com/ST-TOMAS-Examples-ExtMem/stm32h7rs_ospi_mce/releases)
