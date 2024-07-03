@@ -31,7 +31,7 @@ Speed selection:
 
 ### MCE2 & MCE3
 
-Use Neokeon for encryption/decryption
+Use Noekeon for encryption/decryption
 
 Modes:
  - Block only

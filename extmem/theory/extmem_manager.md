@@ -14,6 +14,8 @@ Currently it will support
 
 Itn is a part of memory defined by JETEC standard. It allow to discovery features of memory. The Extmem_manager use it to learn how to work with memroy. 
 
+[JEDEC Link](https://www.jedec.org/standards-documents/docs/jesd216b)
+
 
 ### Usage of Extmem_manager
 
