@@ -18,4 +18,6 @@ To ensure successful encryption, the memory must be operated in memory-mapped mo
 1. Select **HPDMA1**.
 2. Set `Channel15`  to **Standard request mode**.
 
+![](./img/24_07_03_497.png)
+
 Now we can **generate code**.

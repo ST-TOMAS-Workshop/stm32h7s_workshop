@@ -26,6 +26,9 @@ Presentation
 
 In case of the STM32H7R/S series STM32CubeMX allows each peripheral to be set up for use with the Bootloader, Application, and External Memory Loader.
 
+![](./img/bae_mx.json)
+
+
 ## Bootloader 
 Its task is to initialize the system's hardware, system clock and particularly the serial memory interface (OSPI) and hand over the code execution to the main application firmware in external memory.
 The bootloader code will be placed into the MCU's internal flash.
@@ -40,6 +43,8 @@ It can be used with multiple programming tools, such as STM32CubeIDE, STM32CubeP
 
 
 # Pinout
+
+We start with LED
 
 1. The LED is connected to PD13; configure it as an output. 
 
@@ -62,12 +67,17 @@ Pin reservation allows you to specify which application has access to use the pi
 
 By default, the MPU disables access to external memory, so we need to enable it.
 
-The same will apply for `CORTEX_M7_BOOT` and `CORTEX_M7_APPLI`
+Confiogure MPU in `CORTEX_M7_BOOT` 
 We'll be able to access the OSPI memory region, allowing code to be executed from there and utilizing the core cache.
 
-1. Open `CORTEX_M7_BOOT` and `CORTEX_M7_APPLI`
+1. Open `CORTEX_M7_BOOT`
 2. Region 1 `enable`
 3. Region base address `0x90000000`
+
+```c
+0x90000000
+```
+
 4. Region size `32MB`
 5. Access permission to `ALL ACCESS PERMITTED`
 6. Instruction access `ENABLE`
@@ -76,9 +86,20 @@ We'll be able to access the OSPI memory region, allowing code to be executed fro
 
 ![mpu config](./img/24_03_11_439.gif)
 
+In `CORTEX_M7_APPLI` we will disable MPU config this will use config from `CORTEX_M7_BOOT`
+
+9. Open `CORTEX_M7_APPLI`
+10. Set **MPU Control Mode** to` MPU NOT USED`
+
+![](./img/24_07_03_494.png)
+
 # XSPI Mode
 
 We will utilize the XSPI1 (Extended-SPI interface for connecting with external serial memory devices)
+
+xSPI1 is connectd to port1 and port2 on Nucleo the memoryis on port2
+
+![](./img/Slide2.svg)
 
 1. Select XSPI1 configuration for `Bootloader` and for `External loader`
    
@@ -147,6 +168,8 @@ Memory is `Memory 1 `
 5. Go to Memory 1 tab
 6. Select Number of memory data line to `EXTMEM_LINK_CONFIG_8LINES`
 
+![](./img/24_07_03_495.png)
+
 For everything else retain the default settings - Memory driver is `EXTMEM_NOR_SFDP`
 and memory instance is `XSPI1`
 
@@ -172,18 +195,12 @@ Additionally, the `programmming/erase time` can be further optimized according t
 # Clock Configuration
 
 1. Go to `Clock Configuration` tab
-2. We can set HCLK to 600 MHz
-   1. Set DIVM to `/16`
-   2. DIVN1 to `300`
-   3. Set System Clock Mux to `PLLCLK`
-   4. Set BMPRE to `/2`
-   5. Set PPRE5, PPRE1 PPRE2 and PPRE4 to `/2`
+2. Set HCLK to 600MHz
 
-![hclk config](./img/24_03_11_419.gif)
+![hclk config](./img/24_03_11_496.png)
 
 
-
-3. Set XSPI clock to 200 MHz
+1. Set XSPI clock to 200 MHz
    1. Set XSPI1 Clock mux to `PLL2S`
    2. Set DIVM2 to `/4`
    3. set DIVN2 to `50`

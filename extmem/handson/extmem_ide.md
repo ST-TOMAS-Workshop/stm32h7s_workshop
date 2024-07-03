@@ -69,3 +69,11 @@ This is done because, after a reset, the cache may contain invalid data. The Jum
 ![debug setup](./img/24_03_11_427.gif)
 
 If you are using the application for debugging, you will encounter a HardFault exception immediately upon starting. This occurs because the debugger starts the application directly without resetting the device. To address this, you must manually click 'Reset' to physically reset the device, which allows it to jump to the bootloader, and then proceed to run the application.
+
+
+# Conclusion
+
+
+* We created a bootloader to use ExtMem manager to setup OSPI
+* We created simple GPIO toggle application
+* We created e ExternaLoader for IDE and also for STM32CubeProgrammer 
