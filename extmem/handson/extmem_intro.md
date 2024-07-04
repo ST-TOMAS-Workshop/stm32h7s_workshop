@@ -37,7 +37,7 @@ We need to create threee projects:
 - Application
 - External loader
 
-We need to read all `External Memory Manager` to lear how to work with it. And impleent all this functions into `Bootloader` and `External Loader`
+We need to read all `External Memory datasheet` to lear how to work with it. And impleent all this functions into `Bootloader` and `External Loader`
 
 ## With CubeMX for H7RS
 
