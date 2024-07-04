@@ -26,7 +26,7 @@ Presentation
 
 In case of the STM32H7R/S series STM32CubeMX allows each peripheral to be set up for use with the Bootloader, Application, and External Memory Loader.
 
-![](./img/bae_mx.json)
+![](./img/bal_mx.json)
 
 
 ## Bootloader 
