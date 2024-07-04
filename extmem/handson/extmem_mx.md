@@ -197,7 +197,7 @@ Additionally, the `programmming/erase time` can be further optimized according t
 1. Go to `Clock Configuration` tab
 2. Set HCLK to 600MHz
 
-![hclk config](./img/24_03_11_496.png)
+![hclk config](./img/24_07_03_496.png)
 
 
 1. Set XSPI clock to 200 MHz
