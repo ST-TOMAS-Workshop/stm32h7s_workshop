@@ -6,7 +6,7 @@
 
 ## [3. CubeIDE](./handson/extmem_ide.md)
 
-## additonal thory slides
+## Additonal thory slides
 
 - [CubeMX organization for H7RS](./theory/mxdivision.md)
 - [MPU why to set it](./theory/mpu.md)
