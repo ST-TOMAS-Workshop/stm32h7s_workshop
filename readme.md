@@ -10,7 +10,7 @@ This is repository with STM32H7S workshop materials
 
 [TouchGFX project](https://github.com/ST-TOMAS-Examples-Gfx/stm32h7rs_touchgfx_neochrom_benefit)
 
-## [3. Memory Cipher Engine (MCE) for on-the-fly encryption/decryption](./3_external_memory_encryption/memory_encryption.md)
+## [3. Memory Cipher Engine (MCE) for on-the-fly encryption/decryption](./3_external_memory_encryption/external_memory_encryption.md)
 
 [Memory encryption project](https://github.com/ST-TOMAS-Examples-ExtMem/stm32h7rs_ospi_mce)
 
