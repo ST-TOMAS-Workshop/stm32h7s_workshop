@@ -1,6 +1,6 @@
 # STM32H7RSWorkShop-Benefit of NeoChrom Demonstration
 
-[Project Link](https://github.com/ST-TOMAS-Examples-Security/stm32h7rs_debug_authentication)
+[Project Link](https://github.com/ST-TOMAS-Examples-Gfx/stm32h7rs_touchgfx_neochrom_benefit)
 
 The example will guide you through creating a graphical user interface on STM32H7S78-DK which demonstrate the benefit of 
 NeoChrom GPU. We will use TouchGFX designer tool to create this interface which is composed of  two icon that continously 
