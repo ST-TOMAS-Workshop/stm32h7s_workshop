@@ -1,0 +1,1 @@
+# [STM32H7R/S bootflash MCU + OSPI example](external_memory.md)

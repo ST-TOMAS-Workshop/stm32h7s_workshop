@@ -1,0 +1,1 @@
+# [STM32H7S and external memory encryption/decription](external_memory_encryption.md)
