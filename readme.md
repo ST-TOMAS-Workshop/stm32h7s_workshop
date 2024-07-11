@@ -19,4 +19,4 @@ This is repository with STM32H7S workshop materials
 [Debug autentication project](https://github.com/ST-TOMAS-Examples-Security/stm32h7rs_debug_authentication)
 
 
-## [Presentations](./_slides/slides.zip)
+## [Presentations](./_slides/)
