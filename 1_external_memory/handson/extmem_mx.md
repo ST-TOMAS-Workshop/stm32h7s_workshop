@@ -62,6 +62,8 @@ Pin reservation allows you to specify which application has access to use the pi
 
 # MPU confguration
 
+[MPU info](../theory/mpu.md)
+
 By default, the MPU disables access to external memory, so we need to enable it.
 
 Confiogure MPU in `CORTEX_M7_BOOT` 
@@ -120,6 +122,8 @@ xSPI1 is connectd to port1 and port2 on Nucleo the memoryis on port2
 
 # SBS configruation
 
+[SBS & HSLV info](../theory/sbs_hslv.md)
+
 The OSPI is powered by the XSP2 domain, which operates at 1.8V. Therefore, the HSLV (High-Speed Low-Voltage) feature must be utilized.
 HSLV is a characteristic of certain I/O ports that allows them to operate at higher speeds while using lower voltage levels. 
 This feature is particularly useful for applications that require fast data transfer rates without the higher power consumption typically associated with standard voltage levels.
@@ -143,6 +147,9 @@ The `IO HSLV for XSPIM2` is chosen because Port 2 is utilized for XSPI1.
 
 
 # EXTMEM_MANAGER - External Memory manager
+
+[External Manager info](../theory/extmem_manager.md)
+
 
 It's a middleware that can automatically configure the external serial memory interface (xSPI), provided that the memory supports the SFDP standard (Serial Flash Discoverable Parameters defined by JEDEC), or is connected to SDMMC.
 Utilizing SFDP-compliant memory allows the STM32 MCU to automatically detect and set up memory parameters, which ensures compatibility and simplifies integration process.
@@ -171,6 +178,8 @@ For everything else retain the default settings - Memory driver is `EXTMEM_NOR_S
 and memory instance is `XSPI1`
 
 # EXTMEM_LOADER
+
+[External Loader info](../theory/extmem_loader.md)
 
 1. Select the EXTMEM_LOADER middleware
 2. Check Activate External Memory Loader
@@ -216,15 +225,5 @@ On the STM32H7R/S, the XSPI (the interface for connecting with external serial m
 5. Generate Project
 
 ![project configuration](./img/24_03_11_423.gif)
-
-
-# STM32CubeProgrammer
-
-1. Click to `Connect`
-2. Select `Option bytes`
-3. Select `User configuration 1`
-4. Enable `XSPI2_HSLV`
-
-![cube programmer](./img/24_03_11_433.gif)
 
 # [CubeIDE part](extmem_ide.md)
