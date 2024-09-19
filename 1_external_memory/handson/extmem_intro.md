@@ -1,46 +1,51 @@
-# Devices with memory
+# Standard MCUs with Embedded Flash Memory
 
-There is only one project stored in internal FLASH.
+In this case, there is only one project (application) stored in the internal flash memory (simplified scenario).
+Here, we benefit from integration and a more compact design with fewer components on the PCB, but with limited flexibility in memory size and scalability.
 
 ![extloader](./img/Slide4.svg)
 
-# Device with external memory boot code
+# MCUs with External Memory - Bootloader
 
-On device with external memory we need one projectfor internal boot memory
+For MCUs with external memory, we need a project with boot code that runs from the internal flash memory after a reset. 
+This code initializes the hardware and prepares the system to run the application code.
 
 ![extloader](./img/Slide5.svg)
 
-# Device with external memory application code
+# MCUs with External Memory - Application
 
-We need one project for application code which will be in external memory
+The application code itself is another project. 
+Unlike the bootloader, it will be residing in external memory.
 
 ![extloader](./img/Slide6.svg)
 
-# Device with external memory, put code on external memory
+# MCUs with External Memory - External Memory Loader
 
-And we need create external loader to put code into external memory
+We need to create an additional project called external memory loader to manage the external memory, mainly to download the code into external memory.
+The external memory loader allows us to handle the external memory (read/write/erase) without needing any additional hardware. While it's being used, it's loaded into internal SRAM.
 
 
 ![extloader](./img/Slide20.svg)
 
-# What we need then?
+# So, what do we need?
 
-## Use old approach
+## Using the old approach
 
-We need to create threee projects:
+We need to manually create three different projects:
 
 - Bootloader
 - Application
-- External loader
+- External Memory Loader
 
-We need to read all `External Memory datasheet` to lear how to work with it. And impleent all this functions into `Bootloader` and `External Loader`
+We need to thoroughly read the external memory datasheet to understand how to work with it. 
+Then, we should implement all necessary functions into the Bootloader and External Memory Loader.
 
-## With CubeMX for H7RS
+## STM32CubeMX for STM32H7R/S
 
-All this can be done with **STM32CubeMX**
-STM32CubeMX now create all three projects
+The great news is that all this can be done by **STM32CubeMX**
+STM32CubeMX can generate all three projects.
 
-With **SFDP** and **ExtMem Manager** we can automatically configure the memory. Without deep knowledge how memory works. 
+With **SFDP** and **ExtMem Manager**, we can automatically configure the memory without needing to be familiar in detail with the specific memory devices. 
 
 
 # STM32H7R/S bootflash MCU + OSPI example
@@ -65,10 +70,11 @@ We'll be utilizing the NUCLEO-H7S3L8 board as our hardware platform.
 
 # Prerequisites
 
-- STM32CubeMX
-- STM32CubeIDE (or a different IDE)
-- STM32CubeProgrammer
-- NUCLEO-H7S3L8 board
+- STM32CubeMX v6.11.1 or newer
+- STM32CubeIDE v1.15.1 or newer (or a different IDE)
+- STM32CubeProgrammer v2.16.0 or newer
+- NUCLEO-H7S3L8 development board
+- USB-C cable
 
 ## Complete handson:
 
