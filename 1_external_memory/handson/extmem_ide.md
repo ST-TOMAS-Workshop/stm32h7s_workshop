@@ -4,7 +4,7 @@
 2. Import Project to STM32CubeIDE or let STM32CubeMX to import the project for you.
 3. You should have one main project and three sub projects in the workspace. 
 
-4. Open Application project and the main.c
+4. Open Application project and its main.c
 5. Add there the code for GPIO toggling
 
 ```c
@@ -12,7 +12,7 @@
 	  HAL_Delay(500);
 ```
 
-into infinite loop:
+Into the infinite loop:
 
 ```c-nc
   /* Infinite loop */
@@ -46,21 +46,28 @@ into infinite loop:
   SCB_InvalidateDCache();
   SCB_InvalidateICache();
 ```
+This is done because, after a reset, the cache may contain invalid data. The JumpToApplication function will clean the cache, and these invalid records could otherwise cause a hard fault.
 
 # Compile
-
-This is done because, after a reset, the cache may contain invalid data. The JumpToApplication function will clean the cache, and these invalid records could otherwise cause a hard fault.
 
 10. Compile all projects.
 11. Select Application project and run debug
 
 ![run debug](./img/24_03_11_425.gif)
 
-12. Check that external loader is present in the debugger tab
+12. Ensure that the generated external memory loader is present in the Debugger tab. 
+It should appear automatically, thanks to the postbuild script "postbuild.sh" (part of the ExtMemLoader project). If it does not appear, it may be due to insufficient administrative privileges, which can prevent the postbuild script from copying files to the protected location on the C: drive.
 
-13. Go to setup tab
-14. Add Bootloader code that it will be loaded to and we will see the code
-15. Clikc OK
+If this issue occurs, follow these steps:
+
+`1.` Locate the build output file (*.elf) in the ExtMemLoader project's Debug folder.<br>
+`2.` Rename the file to the *.stldr format.<br> 
+`3.` Add the renamed file to External Loaders in the Debugger tab (under Debug Configurations...). 
+
+13. Go to Startup tab
+14. Add Bootloader code, so that it will be built, the executable file transferred to the target MCU,
+and the debugging information loaded into the debugger.
+15. Click OK
 
 ![debug setup](./img/24_03_11_427.gif)
 
