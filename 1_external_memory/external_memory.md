@@ -2,9 +2,11 @@
 
 ## [1. Introduction](./handson/extmem_intro.md)
 
-## [2. STM32CubeMX](./handson/extmem_mx.md)
+## [2. STM32CubeProgrammer](./handson/extmem_programmer.md)
 
-## [3. STM32CubeIDE](./handson/extmem_ide.md)
+## [3. STM32CubeMX](./handson/extmem_mx.md)
+
+## [4. STM32CubeIDE](./handson/extmem_ide.md)
 
 ## Additional theory slides
 
