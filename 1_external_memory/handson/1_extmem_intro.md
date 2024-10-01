@@ -74,4 +74,4 @@ We'll be utilizing the NUCLEO-H7S3L8 board as our hardware platform.
 
 [Link](https://github.com/ST-TOMAS-Examples-ExtMem/stm32h7rs_ospi)
 
-# [CubeProgrammer part](extmem_programmer.md)
+# [CubeProgrammer part](2_extmem_programmer.md)

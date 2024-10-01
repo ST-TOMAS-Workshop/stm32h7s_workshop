@@ -18,5 +18,5 @@ To ensure successful encryption, the memory must be operated in memory-mapped mo
 
 Now we can **generate code**.
 
-# [CubeIDE part](mce_ide.md) or [CubeIDE uncomment part](mce_ide_uncomment.md)
+# [CubeIDE part](3a_mce_ide.md) or [CubeIDE uncomment part](3b_mce_ide_uncomment.md)
 

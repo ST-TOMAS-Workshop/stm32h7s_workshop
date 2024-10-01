@@ -226,4 +226,4 @@ On the STM32H7R/S, the XSPI (the interface for connecting with external serial m
 
 ![project configuration](./img/24_03_11_423.gif)
 
-# [CubeIDE part](extmem_ide.md)
+# [CubeIDE part](4_extmem_ide.md)
