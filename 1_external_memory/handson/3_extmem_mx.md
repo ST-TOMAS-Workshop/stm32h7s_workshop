@@ -118,7 +118,7 @@ xSPI1 is connectd to port1 and port2 on Nucleo the memoryis on port2
 3. Chip Select High Time Cycle to `2`
 4. Set De;ay Hold Quarter Cycle to `Enable`
 
-![xspi configruation](./img/24_03_11_403.gif)
+![xspi configruation](./img/24_10_01_516.gif)
 
 # SBS configruation
 
