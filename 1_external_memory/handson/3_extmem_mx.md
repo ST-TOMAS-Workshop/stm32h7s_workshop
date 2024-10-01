@@ -201,16 +201,16 @@ Additionally, the `programmming/erase time` can be further optimized according t
 # Clock Configuration
 
 1. Go to `Clock Configuration` tab
-2. Set HCLK to 600MHz
+2. Set **CPUCLK** to `600MHz`
 
 ![hclk config](./img/24_07_03_496.png)
 
 
-1. Set XSPI clock to 200 MHz
-   1. Set XSPI1 Clock mux to `PLL2S`
-   2. Set DIVM2 to `/4`
-   3. set DIVN2 to `50`
-   4. Set DIVS2 to `/4`
+1. Set **XSPI** clock to 200 MHz
+   1. Set **XSPI1** Clock mux to `PLL2S`
+   2. Set **DIVM2** to `/4`
+   3. set **DIVN2** to `50`
+   4. Set **DIVS2** to `/4`
 
 ![xspi1 clock config](./img/24_03_11_421.gif)
 
