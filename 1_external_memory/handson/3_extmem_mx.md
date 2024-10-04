@@ -118,7 +118,7 @@ xSPI1 is connectd to port1 and port2 on Nucleo the memoryis on port2
 3. Chip Select High Time Cycle to `2`
 4. Set De;ay Hold Quarter Cycle to `Enable`
 
-![xspi configruation](./img/24_03_11_403.gif)
+![xspi configruation](./img/24_10_01_516.gif)
 
 # SBS configruation
 
@@ -201,16 +201,16 @@ Additionally, the `programmming/erase time` can be further optimized according t
 # Clock Configuration
 
 1. Go to `Clock Configuration` tab
-2. Set HCLK to 600MHz
+2. Set **CPUCLK** to `600MHz`
 
 ![hclk config](./img/24_07_03_496.png)
 
 
-1. Set XSPI clock to 200 MHz
-   1. Set XSPI1 Clock mux to `PLL2S`
-   2. Set DIVM2 to `/4`
-   3. set DIVN2 to `50`
-   4. Set DIVS2 to `/4`
+1. Set **XSPI** clock to 200 MHz
+   1. Set **XSPI1** Clock mux to `PLL2S`
+   2. Set **DIVM2** to `/4`
+   3. set **DIVN2** to `50`
+   4. Set **DIVS2** to `/4`
 
 ![xspi1 clock config](./img/24_03_11_421.gif)
 
@@ -226,4 +226,4 @@ On the STM32H7R/S, the XSPI (the interface for connecting with external serial m
 
 ![project configuration](./img/24_03_11_423.gif)
 
-# [CubeIDE part](extmem_ide.md)
+# [CubeIDE part](4_extmem_ide.md)

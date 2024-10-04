@@ -40,4 +40,4 @@ Both must be applied to have HSLV functional.
 
 ![cube programmer](./img/24_03_11_433.gif)
 
-# [CubeMX part](extmem_mx.md)
+# [CubeMX part](3_extmem_mx.md)

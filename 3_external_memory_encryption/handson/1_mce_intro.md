@@ -32,4 +32,4 @@ The Memory Cipher Engine (MCE) will encrypt the data within the external memory 
 
 [Link](https://github.com/ST-TOMAS-Examples-ExtMem/stm32h7rs_ospi_mce/releases)
 
-# [CubeMX part](./mce_mx.md)
+# [CubeMX part](./2_mce_mx.md)

@@ -1,11 +1,11 @@
 # STM32H7S and external memory encryption/decription
 
 
-## [1. Introduction](./handson/mce_intro.md)
+## [1. Introduction](./handson/1_mce_intro.md)
 
-## [2. CubeMX](./handson/mce_mx.md)
+## [2. CubeMX](./handson/2_mce_mx.md)
 
-## [3. CubeIDE](./handson/mce_ide.md)
+## [3. CubeIDE](./handson/3a_mce_ide.md) or [CubeIDE uncomment part](./handson/3b_mce_ide_uncomment.md)
 
 # Additional theory content
 

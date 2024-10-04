@@ -1,10 +1,12 @@
 # STM32H7R/S bootflash MCU + OSPI example
 
-## [1. Introduction](./handson/extmem_intro.md)
+## [1. Introduction](./handson/1_extmem_intro.md)
 
-## [2. STM32CubeProgrammer](./handson/extmem_programmer.md)
+## [2. CubeProgrammer](./handson/2_extmem_programmer.md)
 
-## [3. STM32CubeMX](./handson/extmem_mx.md)
+## [3. CubeMX](./handson/3_extmem_mx.md)
+
+## [4. CubeIDE](./handson/4_extmem_ide.md)
 
 ## [4. STM32CubeIDE](./handson/extmem_ide.md)
 
