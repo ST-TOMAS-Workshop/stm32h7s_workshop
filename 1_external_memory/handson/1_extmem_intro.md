@@ -72,9 +72,11 @@ We'll be utilizing the NUCLEO-H7S3L8 board as our hardware platform.
 
 - STM32CubeMX v6.11.1 or newer
 - STM32CubeIDE v1.15.1 or newer (or a different IDE)
-- STM32CubeProgrammer v2.16.0 or newer
+- STM32CubeProgrammer v2.16.0 or newer 
 - NUCLEO-H7S3L8 development board
 - USB-C cable
+
+If your system need **admin rights** to access `Program Files`. We recomend to install STM32CubeIDE and STM32CubeProgrammer on different location. It is for External memory loader which can be copyed to STM32CubeProgrammer & STM32CubeIDE automatically with script. But it will not work if you can't access Program Files without permitions. 
 
 ## Complete handson:
 
