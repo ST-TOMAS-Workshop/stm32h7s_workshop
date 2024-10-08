@@ -114,7 +114,7 @@ xSPI1 is connectd to port1 and port2 on Nucleo the memoryis on port2
 # XSPI configration
 
 1. Select Memory type to `Macronix` (memory on the NUCLEO-H7S3L8 board) 
-2. Memory size to `32 MBytes`
+2. Memory size to `256 MBits` (32 MBytes)
 3. Chip Select High Time Cycle to `2`
 4. Set De;ay Hold Quarter Cycle to `Enable`
 
